@@ -3,8 +3,8 @@ import random
 import smtplib
 import pandas
 
-EMAIL = "series00movies@gmail.com"
-PASSWORD = "qswixiomxzsrqrdt"
+EMAIL = "example@gmail.com"
+PASSWORD = "yourpassword"
 
 
 def send_wishes(record):
@@ -14,7 +14,7 @@ def send_wishes(record):
             connection.starttls()  # encrypt ,secure
             connection.login(user=EMAIL, password=PASSWORD)
             connection.sendmail(from_addr=EMAIL,
-                                to_addrs="hacker00me@gmail.com",
+                                to_addrs="yourTarget@gmail.com",
                                 msg=f"Subject:Happy Birthday {record['name']}\n\n" + letter)
 
 
